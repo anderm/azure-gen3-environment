@@ -1,0 +1,23 @@
+parameters:
+- name: envName
+  displayName: Environment Name
+  type: string
+  default: dev # REPLACE ME with your environment name
+  
+pr: none
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - environment-terraform
+    - environment-pipeline-templates
+    - create-environment-pipeline.yml
+
+variables:
+- group: gen3${{ parameters.envName }}-infrastructure-kv
+- group: gen3${{ parameters.envName }}-environment-external
+
+stages:
+- TBD

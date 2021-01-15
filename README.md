@@ -1,2 +1,2 @@
-# azure-gen3-environment
-Automation to deploy the environment for Gen3 on Azure
+# Azure gen3 environment
+Automation to deploy the Gen3 environment on Azure
